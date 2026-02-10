@@ -1,9 +1,16 @@
+from colorama import init, Fore, Back, Style
 from mage import Mage
 from warrior import Warrior
 from assasin import Assasin
 from monster import Monster
 
-print('== SUMMON SEMUA HERO ==')
+# reset warna di terminal
+init(autoreset=True)
+
+# fore = foreground (text)
+# back = background (warna belakang)
+# style = gaya (miring, tebal)
+print(Fore.WHITE + Back.RED + f'== SUMMON SEMUA HERO ==')
 alucard = Warrior("Alucard", 80, 100, 100)
 alok = Mage("Alok", 85, 100, 100)
 hayabusa = Assasin("Hayabusa", 83, 100, 100)
@@ -36,11 +43,19 @@ print("\n⚔️ --- RAID DIMULAI --- ⚔️\n")
 # print(layla)
 # print(hayabusa)
 
+alucard.hp = 240
+hayabusa.hp = 140
+print(f"HP Alucard : {alucard.hp}")
+print(f"HP Hayabusa : {hayabusa.hp}\n")
+
 running = True
 while running:
     print(salamander)
-    print("1. Attack, 2. Heal, 3. Exit")    
-    aksi = int(input(">> Pilih Aksi :"))
+    print("1. Attack, 2. Heal, 3. Exit")  
+    try:   
+        aksi = int(input(">> Pilih Aksi :"))
+    except ValueError:
+        print("Input tidak valid. Masukkan angka 1-3.")
     if aksi == 1:
         dmg = 10
         for party in guild_party:
@@ -58,6 +73,8 @@ while running:
     elif aksi == 3:
         print("Game Berakhir, Bye bye!")
         running = False
+    else:
+        print("Input tidak valid. Masukkan angka 1-3.")
 
 
 
