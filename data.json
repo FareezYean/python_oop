@@ -1,0 +1,22 @@
+{
+    "12345678": {
+        "nama": "Ananda Rafif Abdurrahman",
+        "password": "fareezyean",
+        "saldo": 125000
+    },
+    "87654321": {
+        "nama": "Shofiyyah Layla Zahira",
+        "password": "opi",
+        "saldo": 75000
+    },
+    "12348765": {
+        "nama": "Indra Anadhya Ammar",
+        "password": "wetomole",
+        "saldo": 75000
+    },
+    "huruf": {
+        "nama": "12345678",
+        "password": "huruf123",
+        "saldo": 0
+    }
+}
